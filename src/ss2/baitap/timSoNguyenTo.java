@@ -2,7 +2,7 @@ package ss2.baitap;
 
 import java.util.Scanner;
 
-public class tim_so_nguyen_to {
+public class timSoNguyenTo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter number");

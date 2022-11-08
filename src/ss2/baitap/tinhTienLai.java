@@ -3,7 +3,7 @@ package ss2.baitap;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class tinh_tien_lai {
+public class tinhTienLai {
     public static void main(String[] args) {
         double stl = 0;
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);

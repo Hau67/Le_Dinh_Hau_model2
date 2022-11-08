@@ -2,7 +2,7 @@ package ss1.baitap;
 
 import java.util.Scanner;
 
-public class dem_so {
+public class demSo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println(" Enter Number");
@@ -33,8 +33,10 @@ public class dem_so {
                 case 8:
                     System.out.println("eight");
                     break;
-                default:
+                case 9:
                     System.out.println("nine");
+                    break;
+                default:
                     break;
             }
         }
@@ -51,6 +53,9 @@ public class dem_so {
                     break;
                 case 13:
                     System.out.println("thirteen");
+                    break;
+                default:
+                    break;
 
             }
         }
