@@ -8,9 +8,8 @@ public class themPhanTu {
         Scanner sc = new Scanner(System.in);
         System.out.println("nhập độ dài");
         int sizeN = Integer.parseInt(sc.nextLine());
-        int[] arrN = new int[sizeN];
-        int[] newArrN = new int[arrN.length];
-        int[] newsizeN = new int[sizeN+1];
+        int[] arrN = new int[sizeN + 1];
+
 
         for (int i = 0; i < sizeN; i++) {
             System.out.println("nhập số thứ " + (i + 1));
@@ -21,21 +20,17 @@ public class themPhanTu {
         int x = Integer.parseInt(sc.nextLine());
         System.out.println("vị trị index");
         int index = Integer.parseInt(sc.nextLine());
+        int size = arrN.length;
 
         if (index <= -1 && index >= arrN.length - 1) {
             System.out.println("không chèn được");
-        } else {
-            int size = arrN.length;
-            for (int i = size; i >= 0; i--) {
-                if ( index != i ) {
-                    newsizeN[i+1] = arrN[i];
-                } else {
-                    newsizeN[i+1] = x;
+        } else  {
+            for (int i = size-1; i > index; i--) {
+                arrN[i] = arrN[i-1];
                 }
             }
-            for (int numb : newsizeN) {
-                System.out.print(numb + " ");
-            }
-        }
+        arrN[index] = x;
+
+        System.out.println(Arrays.toString(arrN));
     }
 }

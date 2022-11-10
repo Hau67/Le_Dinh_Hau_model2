@@ -9,7 +9,6 @@ public class Fan {
     private boolean on = false ;
     private double radius = 5 ;
     private String color = "blue" ;
-//    Phương thức khởi tạo không tham số tạo đối tượng fan mặc định
     public Fan(){
     }
 
@@ -64,9 +63,7 @@ public class Fan {
         this.color = color;
     }
 
-    @Override //Phương thức toString() trả về chuỗi chứa thông tin của quạt.
-    // Nếu quạt đang ở trạng thái on, phương thức trả về speed, color, và radius với chuỗi “fan is on”.
-    // Nếu quạt không ở trạng thái on, phương thức trả về color, radius với chuỗi “fan is off”.
+    @Override
     public String toString() {
         return "Fan{" +
                 "speed=" + speed +
