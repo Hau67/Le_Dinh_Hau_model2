@@ -35,7 +35,7 @@ public class Crilce {
     public String toString() {
         return "Crilce{" +
                 "radius=" + radius +
-                ", color='" + color + "Arae" + getArea() +
+                ", color='" + color + "', Arae " + getArea() +
                 '}';
     }
 }
