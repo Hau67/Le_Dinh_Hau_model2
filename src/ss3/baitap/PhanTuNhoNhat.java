@@ -18,7 +18,7 @@ public class PhanTuNhoNhat {
         System.out.println(Arrays.toString(arr));
         int min = arr[0];
 
-        for (int i = 0; i < size ; i++) {
+        for (int i = 1; i < size ; i++) {
             if ( arr[i] <= min ) {
                 min = arr[i] ;
             }
