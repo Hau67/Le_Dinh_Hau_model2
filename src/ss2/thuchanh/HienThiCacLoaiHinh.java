@@ -2,7 +2,7 @@ package ss2.thuchanh;
 
 import java.util.Scanner;
 
-public class hienThiCacLoaiHinh {
+public class HienThiCacLoaiHinh {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("chọn số 1 hình chữ nhật \n " +
