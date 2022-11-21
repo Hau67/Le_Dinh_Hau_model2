@@ -1,7 +1,7 @@
 package ss7.ThucHanh1.ThucHanh3;
 
 public class Square extends Shape implements Colorable{
-    double sideLength;
+    private double sideLength;
 
     public Square() {
     }

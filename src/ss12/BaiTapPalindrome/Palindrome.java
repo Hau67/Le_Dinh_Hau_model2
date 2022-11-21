@@ -8,5 +8,7 @@ public class Palindrome {
         System.out.println("nhập chuỗi");
         String string = sc.nextLine();
         String[] arrString = string.toLowerCase().split("");
+
+
     }
 }
