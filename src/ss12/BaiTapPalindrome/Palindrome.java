@@ -9,16 +9,30 @@ public class Palindrome {
         String string = sc.nextLine();
         String[] arrString = string.toLowerCase().split("");
 
-        Stack<String> strStack = new Stack<>();
+        Stack<String> stack = new Stack<>();
+        Queue<String> queue = new LinkedList<>();
 
-        for (String arr : arrString) {
-            if (!Objects.equals(arr," ")) {
-                strStack.add(arr);
-            }
+
+        for ( int i = 0; i < arrString.length ; i++) {
+            stack.add(arrString[i]);
         }
 
-        Queue<String> strque = new ArrayDeque<>();
+        for (int i = 0 ; i < arrString.length; i++) {
+            queue.add(arrString[i]);
+        }
 
-
+        int size = queue.size();
+        boolean kiemTra = true;
+        for (int i = 0; i < size ; i++) {
+            if(stack.pop().equals(queue.remove())){
+                kiemTra = false;
+                break;
+            }
+        }
+        if (kiemTra) {
+            System.out.println(string + " là chuỗi đối xứng" );
+        }else {
+            System.out.println(string + " là chuỗi không đối xứng ");
+        }
     }
 }
