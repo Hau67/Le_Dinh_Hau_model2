@@ -25,7 +25,7 @@ public class Triangle {
         if (a > 0 && b > 0 && c > 0 && (a + b > c || a + c > b || b + c > a)) {
             System.out.println("Đây là 1 tam giác");
         } else {
-            System.out.println("sai điều kiên");;
+            throw new IllegalTriangleException("sai điều kiên");
         }
     }
 }
