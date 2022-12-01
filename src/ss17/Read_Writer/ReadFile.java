@@ -11,7 +11,7 @@ public class ReadFile {
         try {
             FileReader fileReader = new FileReader(pathFile);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-            String line = null;
+            String line;
 
 
             while ((line = bufferedReader.readLine()) != null) {

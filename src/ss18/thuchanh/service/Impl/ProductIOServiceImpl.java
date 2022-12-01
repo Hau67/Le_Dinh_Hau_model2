@@ -1,5 +1,7 @@
 package ss18.thuchanh.service.Impl;
 
-public class ProductIOServiceImpl  {
+import ss18.thuchanh.service.IServiceproduct;
+
+public class ProductIOServiceImpl {
 
 }
