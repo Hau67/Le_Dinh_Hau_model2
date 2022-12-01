@@ -7,6 +7,6 @@ import java.util.List;
 public interface IQuanLySanPham {
     void them(SanPham sanPham);
     List<SanPham> hienThi();
-    void timKiem(SanPham maSanPham);
+    void timKiem(String maSanPham);
 
 }

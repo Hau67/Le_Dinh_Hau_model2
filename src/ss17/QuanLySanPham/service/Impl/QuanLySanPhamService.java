@@ -27,7 +27,7 @@ public class QuanLySanPhamService implements IQuanLySanPham {
     }
 
     @Override
-    public void timKiem(SanPham maSanPham) {
+    public void timKiem(String maSanPham) {
         List<SanPham> list;
         list = quanLySanPhamDocGhiFile.readFile(PATH_NAME);
         for (SanPham sanPham : list) {
