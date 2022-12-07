@@ -1,10 +1,17 @@
 package caseStudy.view;
 
+import caseStudy.controller.EmployeeManagementController;
+import caseStudy.service.behind.IEmployeeManagementService;
+import caseStudy.service.behind.Impl.EmployeeManagementServiceImpl;
+import caseStudy.view.Management.CustomerManagement;
+import caseStudy.view.Management.EmployeeManagement;
+
 import java.util.Scanner;
 
 public class DisplayMainMenu {
     Scanner sc = new Scanner(System.in);
     public void displayMenu(){
+
         do {
             System.out.println("Menu");
             System.out.println("1.Employee Management");
@@ -17,9 +24,12 @@ public class DisplayMainMenu {
             int number = Integer.parseInt(sc.nextLine());
             switch (number){
                 case 1:
-
+                    EmployeeManagement employeeManagement = new EmployeeManagement();
+                    employeeManagement.displayMainEmployee();
                     break;
                 case 2:
+                    CustomerManagement customerManagement = new CustomerManagement();
+                    customerManagement.displayMainCustonmer();
                     break;
                 case 3:
                     break;

@@ -15,7 +15,7 @@ public class BookingManagementServiceImpl implements IBookingManagementService {
     }
 
     @Override
-    public void menuMail() {
+    public void menuMain() {
 
     }
 }

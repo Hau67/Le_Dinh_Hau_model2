@@ -14,7 +14,7 @@ public class PromotionManagementServiceImpl implements IPromotionManagementServi
     }
 
     @Override
-    public void menuMail() {
+    public void menuMain() {
 
     }
 

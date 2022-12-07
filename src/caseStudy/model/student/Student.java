@@ -64,4 +64,16 @@ public abstract class Student {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", date=" + date +
+                ", sex='" + sex + '\'' +
+                ", identityCard='" + identityCard + '\'' +
+                ", phone=" + phone +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

@@ -1,9 +1,13 @@
 package caseStudy.view.Management;
 
+import caseStudy.controller.EmployeeManagementController;
+import caseStudy.service.behind.Impl.EmployeeManagementServiceImpl;
+
 import java.util.Scanner;
 
 public class EmployeeManagement {
     Scanner sc = new Scanner(System.in);
+    private final EmployeeManagementController employeeManagementController = new EmployeeManagementController();
     public void displayMainEmployee(){
         do {
             System.out.println("Menu Employee Management");
@@ -16,10 +20,21 @@ public class EmployeeManagement {
 
             switch (number){
                 case 1:
+                    this.employeeManagementController.displayEmployee();
+                    break;
                 case 2:
+                    this.employeeManagementController.addNewEmployee();
+                    break;
                 case 3:
+                    this.employeeManagementController.deleteEmployee();
+                    break;
                 case 4:
+                    this.employeeManagementController.editEmployee();
+                    break;
                 case 5:
+                    return;
+                default:
+                    System.out.println("enter wrong re-enter");
 
             }
 

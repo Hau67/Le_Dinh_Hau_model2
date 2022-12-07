@@ -19,7 +19,7 @@ public class FacilityManagementServiceImpl implements IFacilityManagementService
     }
 
     @Override
-    public void menuMail() {
+    public void menuMain() {
 
     }
 }

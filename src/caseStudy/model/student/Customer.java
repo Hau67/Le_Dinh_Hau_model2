@@ -8,9 +8,9 @@ public class Customer extends Student {
         super(name, date, sex, identityCard, phone, email);
     }
 
-    public Customer(String name, int date, String sex, String identityCard, int phone, String email, int numberClient, String address) {
+    public Customer(String name, int date, String sex, String identityCard, int phone, String email, int codeClient, String address) {
         super(name, date, sex, identityCard, phone, email);
-        this.codeClient = numberClient;
+        this.codeClient = codeClient;
         this.address = address;
     }
 
@@ -28,5 +28,13 @@ public class Customer extends Student {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "codeClient=" + codeClient +
+                ", address='" + address + '\'' +
+                "} " + super.toString();
     }
 }

@@ -14,7 +14,7 @@ public class ManageMentService implements IManagementServise {
     }
 
     @Override
-    public void menuMail() {
+    public void menuMain() {
 
     }
 }
