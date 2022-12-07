@@ -24,16 +24,14 @@ public class QuanLySanPhamDocGhiFile implements IDocGhiFile {
                 SanPham sanPham = new SanPham(array);
                 list.add(sanPham);
             }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());
         } finally {
             try {
                 bufferedReader.close();
                 fileReader.close();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                System.out.println(e.getMessage());
             }
         }
         return list;
@@ -56,13 +54,13 @@ public class QuanLySanPhamDocGhiFile implements IDocGhiFile {
             bufferedWriter.flush();
             fileWriter.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());
         }finally {
             try {
                 bufferedWriter.close();
                 fileWriter.close();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                System.out.println(e.getMessage());
             }
         }
     }

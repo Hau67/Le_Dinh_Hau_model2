@@ -8,7 +8,7 @@ import java.util.List;
 
 
 public class QuanLySanPhamService implements IQuanLySanPham {
-    public static  final String PATH_NAME = "src/ss17/QuanLySanPham/data/File";
+    public static  final String PATH_NAME = "src/ss17/QuanLySanPham/data/file.csv";
     private static QuanLySanPhamDocGhiFile quanLySanPhamDocGhiFile = new QuanLySanPhamDocGhiFile();
 
     @Override
