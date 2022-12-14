@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8180fe59-a805-4261-9a61-4e23b78672a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Employee/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Employee/data/doc_ghi_fileCSV" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Employee/main/EmployeeMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Employee/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Employee/service/IEmployeeDocGhiFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Employee/service/IEmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Employee/service/Impl/EmployeeDocGhiFileImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Employee/service/Impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Employee/view/EmployeeView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TuHoc/Bai1/ss10/MyClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caseStudy/controller/FacitilyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caseStudy/service/behind/IFacilityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caseStudy/service/behind/Impl/FacilityServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caseStudy/view/Facility/DisplayFacilityMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_model2/bai1/SoChinhPhuong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/demo/caseStudy/model/Furama/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/demo/caseStudy/model/Furama/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/demo/caseStudy/model/Furama/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/demo/caseStudy/model/Furama/Villa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/demo/caseStudy/service/behind/Impl/FacilityManagementServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/demo/ss17/QuanLySanPham/service/Impl/QuanLySanPhamDocGhiFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/demo/ss17/QuanLySanPham/service/Impl/QuanLySanPhamDocGhiFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/demo/ss17/QuanLySanPham/service/Impl/QuanLySanPhamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/demo/ss17/QuanLySanPham/service/Impl/QuanLySanPhamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caseStudy/model/Furama/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/caseStudy/model/Furama/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caseStudy/model/Furama/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/caseStudy/model/Furama/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caseStudy/service/Facitity/FacilityServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caseStudy/service/behind/Impl/FacilityManagementServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss17/QuanLySanPham/service/Impl/QuanLySanPhamDocGhiFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss17/QuanLySanPham/service/Impl/QuanLySanPhamDocGhiFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss17/QuanLySanPham/service/Impl/QuanLySanPhamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss17/QuanLySanPham/service/Impl/QuanLySanPhamService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ItTcHGrsgORL8lAxC6kvmpSF5Y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/codegym/module2/demo"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8180fe59-a805-4261-9a61-4e23b78672a3" name="Changes" comment="" />
+      <created>1670999957238</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670999957238</updated>
+      <workItem from="1670999958439" duration="36000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

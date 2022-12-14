@@ -50,9 +50,6 @@ public class QuanLySanPhamDocGhiFile implements IDocGhiFile {
                 bufferedWriter.write(sanPhams.khuonMauCSV());
                 bufferedWriter.newLine();
             }
-
-            bufferedWriter.flush();
-            fileWriter.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }finally {

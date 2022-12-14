@@ -23,4 +23,12 @@ public  class Villa extends Facitily {
     public void setSwimmingPoolArea(double swimmingPoolArea) {
         this.swimmingPoolArea = swimmingPoolArea;
     }
+
+    @Override
+    public String toString() {
+        return "Villa{" +
+                "roomStandard='" + roomStandard + '\'' +
+                ", swimmingPoolArea=" + swimmingPoolArea +
+                "} " + super.toString();
+    }
 }

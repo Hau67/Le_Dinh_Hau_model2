@@ -14,4 +14,11 @@ public class Room extends Facitily {
     public void setFreeServiceIncluded(String freeServiceIncluded) {
         this.freeServiceIncluded = freeServiceIncluded;
     }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "freeServiceIncluded='" + freeServiceIncluded + '\'' +
+                "} " + super.toString();
+    }
 }
