@@ -1,17 +1,16 @@
-package casestudy.lamlai_casestudy.service.customer.impl;
+package casestudy.lamlai_casestudy.service.facility.impl;
 
-import casestudy.lamlai_casestudy.model.customer.Customer;
-import casestudy.lamlai_casestudy.service.customer.ICustomerServiceIO;
+import casestudy.lamlai_casestudy.model.furama.extend.Room;
+import casestudy.lamlai_casestudy.service.facility.IRoomServiceIO;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
-public class CustomerServiceIO implements ICustomerServiceIO {
+public class RoomServiceIO implements IRoomServiceIO {
     @Override
-    public LinkedList<Customer> readFile(String path) {
-        LinkedList<Customer> list = new LinkedList<>();
+    public Map<Room, Integer> readFile(String path) {
+        Map<Room,Integer> map = new LinkedHashMap<>();
         FileReader fileReader = null;
         BufferedReader bufferedReader = null;
 
@@ -20,22 +19,21 @@ public class CustomerServiceIO implements ICustomerServiceIO {
             bufferedReader = new BufferedReader(fileReader);
 
             String line;
-
-            while ((line = bufferedReader.readLine()) != null){
-                String[] cus = line.split(",");
-                Customer customer = new Customer(cus[0],cus[1],cus[2],cus[3],cus[4],cus[5],cus[6],cus[7],cus[8]);
-                list.add(customer);
+            while ((line = bufferedReader.readLine())!= null){
+                String[] ro = line.split(",");
+                Room room = new Room(ro[0],ro[1],ro[2],ro[3],ro[4],ro[5]);
+                map.put(room,Integer.parseInt(ro[6]));
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return list;
+        return map;
     }
 
     @Override
-    public void writeFile(String path, List<Customer> customers) {
+    public void writeFile(String path, Map<Room, Integer> map) {
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
 
@@ -43,9 +41,8 @@ public class CustomerServiceIO implements ICustomerServiceIO {
             fileWriter = new FileWriter(path);
             bufferedWriter = new BufferedWriter(fileWriter);
 
-            for (Customer customer : customers) {
-                bufferedWriter.write(customer.khuonMauCustomerCSV());
-                bufferedWriter.newLine();
+            for (Map.Entry<Room,Integer> entry : map.entrySet()) {
+                System.out.println(entry.getKey() + " " + entry.getValue());
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

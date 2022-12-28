@@ -1,18 +1,17 @@
 package casestudy.lamlai_casestudy.model.furama.extend;
 
-import casestudy.casestudymodul2.model.Furama;
+import casestudy.lamlai_casestudy.model.furama.Facility;
 
-public class villa extends Furama {
-
-    public villa(String tenDichVu, double dienTichSudung, double chiPhiThue, int soNguoiToiDa, String kieuThue) {
-        super(tenDichVu, dienTichSudung, chiPhiThue, soNguoiToiDa, kieuThue);
+public class Villa extends Facility {
+    public Villa(String tenDichVu, String dienTichSuDung, String chiPhiThue, String soLuongNguoiToiDa, String kieuThue) {
+        super(tenDichVu, dienTichSuDung, chiPhiThue, soLuongNguoiToiDa, kieuThue);
     }
 
     private String tieuChuanPhong;
     private String dienTichHoBoi;
 
-    public villa(String tenDichVu, double dienTichSudung, double chiPhiThue, int soNguoiToiDa, String kieuThue, String tieuChuanPhong, String dienTichHoBoi) {
-        super(tenDichVu, dienTichSudung, chiPhiThue, soNguoiToiDa, kieuThue);
+    public Villa(String tenDichVu, String dienTichSuDung, String chiPhiThue, String soLuongNguoiToiDa, String kieuThue, String tieuChuanPhong, String dienTichHoBoi) {
+        super(tenDichVu, dienTichSuDung, chiPhiThue, soLuongNguoiToiDa, kieuThue);
         this.tieuChuanPhong = tieuChuanPhong;
         this.dienTichHoBoi = dienTichHoBoi;
     }
@@ -35,9 +34,13 @@ public class villa extends Furama {
 
     @Override
     public String toString() {
-        return "villa{" +
+        return "Villa{" +
                 "tieuChuanPhong='" + tieuChuanPhong + '\'' +
                 ", dienTichHoBoi='" + dienTichHoBoi + '\'' +
                 "} " + super.toString();
+    }
+
+    public String khuonMauVillaCSV(){
+        return getTenDichVu()+","+getDienTichSuDung()+","+getChiPhiThue()+","+getSoLuongNguoiToiDa()+","+getKieuThue()+","+getTieuChuanPhong()+","+getDienTichHoBoi();
     }
 }

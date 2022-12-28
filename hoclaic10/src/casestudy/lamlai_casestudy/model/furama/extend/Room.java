@@ -1,17 +1,16 @@
 package casestudy.lamlai_casestudy.model.furama.extend;
 
-import casestudy.casestudymodul2.model.Furama;
+import casestudy.lamlai_casestudy.model.furama.Facility;
 
-public class Room extends Furama {
-
-    public Room(String tenDichVu, double dienTichSudung, double chiPhiThue, int soNguoiToiDa, String kieuThue) {
-        super(tenDichVu, dienTichSudung, chiPhiThue, soNguoiToiDa, kieuThue);
+public class Room extends Facility {
+    public Room(String tenDichVu, String dienTichSuDung, String chiPhiThue, String soLuongNguoiToiDa, String kieuThue) {
+        super(tenDichVu, dienTichSuDung, chiPhiThue, soLuongNguoiToiDa, kieuThue);
     }
 
     private String dichVuMienPhiDiKem;
 
-    public Room(String tenDichVu, double dienTichSudung, double chiPhiThue, int soNguoiToiDa, String kieuThue, String dichVuMienPhiDiKem) {
-        super(tenDichVu, dienTichSudung, chiPhiThue, soNguoiToiDa, kieuThue);
+    public Room(String tenDichVu, String dienTichSuDung, String chiPhiThue, String soLuongNguoiToiDa, String kieuThue, String dichVuMienPhiDiKem) {
+        super(tenDichVu, dienTichSuDung, chiPhiThue, soLuongNguoiToiDa, kieuThue);
         this.dichVuMienPhiDiKem = dichVuMienPhiDiKem;
     }
 
@@ -28,5 +27,9 @@ public class Room extends Furama {
         return "Room{" +
                 "dichVuMienPhiDiKem='" + dichVuMienPhiDiKem + '\'' +
                 "} " + super.toString();
+    }
+
+    public String khuonMauRoomCSV(){
+        return getTenDichVu()+","+getDienTichSuDung()+","+getChiPhiThue()+","+getSoLuongNguoiToiDa()+","+getKieuThue()+","+getDichVuMienPhiDiKem();
     }
 }
