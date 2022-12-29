@@ -21,4 +21,8 @@ public class FacilityController {
     public void themVilla(Villa villa){
         this.facilityService.themVilla(villa);
     }
+
+    public Map<String, Integer> baoTriFacility(){
+        return this.facilityService.baoTriFacility();
+    }
 }

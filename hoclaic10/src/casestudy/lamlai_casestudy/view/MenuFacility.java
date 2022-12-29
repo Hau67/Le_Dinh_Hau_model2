@@ -13,7 +13,7 @@ public class MenuFacility {
         do {
             System.out.println("1. hiển thị Facility");
             System.out.println("2. thêm Facility");
-            System.out.println("3. bảo trì Facility");
+            System.out.println("3. hiển thị cần bảo trì Facility");
             System.out.println("4. menu chính");
             System.out.println("-------------");
             System.out.println("chọn số");
@@ -72,11 +72,15 @@ public class MenuFacility {
                             default:
                                 System.out.println("chọn sai mời nhập lại");
                         }
-
                     }while (true);
 
-
-
+                case 3:
+                    this.facilityController.baoTriFacility();
+                    break;
+                case 4:
+                    return;
+                default:
+                    System.out.println("nhập sai mời nhập lại");
             }
         }while (true);
     }
