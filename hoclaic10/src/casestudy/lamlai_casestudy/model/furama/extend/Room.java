@@ -26,7 +26,7 @@ public class Room extends Facility {
     public String toString() {
         return "Room{" +
                 "dichVuMienPhiDiKem='" + dichVuMienPhiDiKem + '\'' +
-                "} " + super.toString();
+                "}, " + super.toString();
     }
 
     public String khuonMauRoomCSV(){

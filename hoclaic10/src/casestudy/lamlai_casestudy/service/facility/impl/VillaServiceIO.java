@@ -1,16 +1,16 @@
 package casestudy.lamlai_casestudy.service.facility.impl;
 
-import casestudy.lamlai_casestudy.model.furama.extend.Room;
-import casestudy.lamlai_casestudy.service.facility.IRoomServiceIO;
+import casestudy.lamlai_casestudy.model.furama.extend.Villa;
+import casestudy.lamlai_casestudy.service.facility.IVillaServiceIO;
 
 import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class RoomServiceIO implements IRoomServiceIO {
+public class VillaServiceIO implements IVillaServiceIO {
     @Override
-    public Map<Room, Integer> readFile(String path) {
-        Map<Room,Integer> map = new LinkedHashMap<>();
+    public Map<Villa, Integer> readFile(String path) {
+        Map<Villa,Integer> map = new LinkedHashMap<>();
         FileReader fileReader = null;
         BufferedReader bufferedReader = null;
 
@@ -19,10 +19,10 @@ public class RoomServiceIO implements IRoomServiceIO {
             bufferedReader = new BufferedReader(fileReader);
 
             String line;
-            while ((line = bufferedReader.readLine())!= null){
-                String[] ro = line.split(",");
-                Room room = new Room(ro[0],ro[1],ro[2],ro[3],ro[4],ro[5]);
-                map.put(room,Integer.parseInt(ro[6]));
+            while ((line = bufferedReader.readLine()) != null){
+                String[] vi = line.split(",");
+                Villa villa = new Villa(vi[0],vi[1],vi[2],vi[3],vi[4],vi[5],vi[6]);
+                map.put(villa,Integer.parseInt(vi[7]));
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -33,16 +33,16 @@ public class RoomServiceIO implements IRoomServiceIO {
     }
 
     @Override
-    public void writeFile(String path, Map<Room, Integer> map) {
-        FileWriter fileWriter = null;
+    public void writeFile(String path, Map<Villa, Integer> mapVilla) {
+        FileWriter fileWriter= null;
         BufferedWriter bufferedWriter = null;
 
         try {
             fileWriter = new FileWriter(path);
             bufferedWriter = new BufferedWriter(fileWriter);
 
-            for (Map.Entry<Room,Integer> entry : map.entrySet()) {
-                bufferedWriter.write(entry.getKey().khuonMauRoomCSV()+ "," + entry.getValue());
+            for (Map.Entry<Villa,Integer> entry : mapVilla.entrySet()) {
+                bufferedWriter.write(entry.getKey().khuonMauVillaCSV()+","+entry.getValue());
                 bufferedWriter.newLine();
             }
         } catch (IOException e) {
@@ -54,6 +54,7 @@ public class RoomServiceIO implements IRoomServiceIO {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+
         }
     }
 }
