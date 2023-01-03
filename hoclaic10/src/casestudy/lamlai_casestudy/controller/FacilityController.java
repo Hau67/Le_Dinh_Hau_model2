@@ -10,8 +10,8 @@ import java.util.Map;
 public class FacilityController {
     FacilityService facilityService = new FacilityService();
 
-    public Map<Facility, Integer> hienThiFacility(){
-        return this.facilityService.hienThiFacility();
+    public void hienThiFacility(){
+         this.facilityService.hienThiFacility();
     }
 
     public void themRoom(Room room){
@@ -22,7 +22,7 @@ public class FacilityController {
         this.facilityService.themVilla(villa);
     }
 
-    public Map<String, Integer> baoTriFacility(){
-        return this.facilityService.baoTriFacility();
+    public void baoTriFacility(){
+        this.facilityService.baoTriFacility();
     }
 }

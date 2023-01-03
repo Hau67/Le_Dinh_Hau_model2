@@ -67,7 +67,7 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Person{" +
                 "hoTen='" + hoTen + '\'' +
                 ", ngaySinh='" + ngaySinh + '\'' +
                 ", gioiTinh='" + gioiTinh + '\'' +

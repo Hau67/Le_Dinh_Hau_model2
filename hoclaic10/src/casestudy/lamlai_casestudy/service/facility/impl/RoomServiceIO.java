@@ -25,9 +25,9 @@ public class RoomServiceIO implements IRoomServiceIO {
                 map.put(room,Integer.parseInt(ro[6]));
             }
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return map;
     }
@@ -46,13 +46,13 @@ public class RoomServiceIO implements IRoomServiceIO {
                 bufferedWriter.newLine();
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }finally {
             try {
                 bufferedWriter.close();
                 fileWriter.close();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
     }

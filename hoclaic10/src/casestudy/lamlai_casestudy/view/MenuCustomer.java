@@ -13,12 +13,18 @@ public class MenuCustomer {
 
     public void displayCustomer() {
         do {
-            System.out.println("1. hiện thị Customer");
-            System.out.println("2. thêm Customer");
-            System.out.println("3. sửa Customer");
-            System.out.println("4. menu chính");
+            System.out.println("1. hiện thị khách hàng");
+            System.out.println("2. thêm khách hàng");
+            System.out.println("3. sửa khách hàng");
+            System.out.println("4. về trang chính");
             System.out.println("chọn số");
-            int num = Integer.parseInt(sc.nextLine());
+            int num;
+            try {
+                num = Integer.parseInt(sc.nextLine());
+            }catch (NumberFormatException e){
+                System.out.println(e.getMessage());
+                continue;
+            }
             switch (num) {
                 case 1:
                     LinkedList<Customer> linkedList = this.customerController.hienThiCustomer();

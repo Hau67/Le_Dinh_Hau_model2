@@ -13,13 +13,19 @@ public class MenuFacility {
 
     public void displayFacility(){
         do {
-            System.out.println("1. hiển thị Facility");
-            System.out.println("2. thêm Facility");
-            System.out.println("3. hiển thị cần bảo trì Facility");
-            System.out.println("4. menu chính");
+            System.out.println("1. hiển thị cơ sở");
+            System.out.println("2. thêm cơ sở");
+            System.out.println("3. hiển thị cần bảo trì cơ sở");
+            System.out.println("4. về trang chính");
             System.out.println("-------------");
             System.out.println("chọn số");
-            int num = Integer.parseInt(sc.nextLine());
+            int num;
+            try {
+                num = Integer.parseInt(sc.nextLine());
+            }catch (NumberFormatException e){
+                System.out.println(e.getMessage());
+                continue;
+            }
             switch (num){
                 case 1:
                     facilityController.hienThiFacility();
@@ -30,7 +36,13 @@ public class MenuFacility {
                         System.out.println("2. thêm room");
                         System.out.println("3. về trang chính");
                         System.out.println("chọn số");
-                        int number = Integer.parseInt(sc.nextLine());
+                        int number;
+                        try {
+                            number = Integer.parseInt(sc.nextLine());
+                        }catch (NumberFormatException e){
+                            System.out.println(e.getMessage());
+                            continue;
+                        }
 
                         switch (number) {
                             case 1:

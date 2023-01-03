@@ -38,6 +38,15 @@ public class CustomerService implements ICustomerService {
                 String lK = sc.nextLine();
                 System.out.println("sửa địa chỉ");
                 String dC = sc.nextLine();
+                System.out.println("sửa tên");
+                String ten = sc.nextLine();
+                System.out.println("sửa ngày sinh");
+                String ngaySinh = sc.nextLine();
+                System.out.println("sửa giới tính");
+                String gioiTinh = sc.nextLine();
+                customer.setNgaySinh(ngaySinh);
+                customer.setGioiTinh(gioiTinh);
+                customer.setHoTen(ten);
                 customer.setDiaChi(dC);
                 customer.setLoaiKhach(lK);
                 customer.setMaKhachHang(maKH);

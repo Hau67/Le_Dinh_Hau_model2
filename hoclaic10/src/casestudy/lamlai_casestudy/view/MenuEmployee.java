@@ -12,14 +12,20 @@ public class MenuEmployee {
 
     public void displayEmployee(){
         do {
-            System.out.println("1. hiển thị employee");
-            System.out.println("2. thêm employee");
-            System.out.println("3. xóa employee");
-            System.out.println("4. sửa employee");
+            System.out.println("1. hiển thị nhân sự");
+            System.out.println("2. thêm nhân sự");
+            System.out.println("3. xóa nhân sự");
+            System.out.println("4. sửa nhân sự");
             System.out.println("5. về trang chính");
             System.out.println("-------------");
             System.out.println("chọn số nào");
-            int num = Integer.parseInt(sc.nextLine());
+            int num;
+            try {
+                num = Integer.parseInt(sc.nextLine());
+            }catch (NumberFormatException e){
+                System.out.println(e.getMessage());
+                continue;
+            }
             switch (num){
                 case 1:
                     List<Employee> list = this.employeeController.hienThiEmployee();

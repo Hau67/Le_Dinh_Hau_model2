@@ -25,9 +25,9 @@ public class VillaServiceIO implements IVillaServiceIO {
                 map.put(villa,Integer.parseInt(vi[7]));
             }
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return map;
     }
@@ -46,13 +46,13 @@ public class VillaServiceIO implements IVillaServiceIO {
                 bufferedWriter.newLine();
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+           e.printStackTrace();
         }finally {
             try {
                 bufferedWriter.close();
                 fileWriter.close();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
 
         }

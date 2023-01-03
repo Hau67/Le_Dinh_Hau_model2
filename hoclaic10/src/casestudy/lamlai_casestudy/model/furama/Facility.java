@@ -57,7 +57,7 @@ public abstract class Facility {
 
     @Override
     public String toString() {
-        return "Furama{" +
+        return "Facility{" +
                 "tenDichVu='" + tenDichVu + '\'' +
                 ", dienTichSuDung='" + dienTichSuDung + '\'' +
                 ", chiPhiThue='" + chiPhiThue + '\'' +

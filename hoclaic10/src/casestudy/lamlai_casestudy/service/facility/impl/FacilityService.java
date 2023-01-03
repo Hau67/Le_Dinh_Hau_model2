@@ -19,7 +19,7 @@ public static final String PATH_ROOM = "src/casestudy/lamlai_casestudy/data/room
 public static final String PATH_VILLA = "src/casestudy/lamlai_casestudy/data/villa_file.csv";
 
     @Override
-    public Map<Facility, Integer> hienThiFacility() {
+    public void hienThiFacility() {
         Map<Room,Integer> roomMap =this.iRoomServiceIO.readFile(PATH_ROOM);
         Map<Villa,Integer> villaMap = this.iVillaServiceIO.readFile(PATH_VILLA);
         facilityMap.putAll(roomMap);
@@ -30,7 +30,7 @@ public static final String PATH_VILLA = "src/casestudy/lamlai_casestudy/data/vil
         for (Map.Entry<Villa, Integer> entry1: villaMap.entrySet()){
             System.out.println(entry1);
         }
-        return facilityMap;
+
     }
 
     @Override
@@ -50,7 +50,7 @@ public static final String PATH_VILLA = "src/casestudy/lamlai_casestudy/data/vil
     }
 
     @Override
-    public Map<String, Integer> baoTriFacility() {
+    public void baoTriFacility() {
         Map<Room,Integer> roomMap =this.iRoomServiceIO.readFile(PATH_ROOM);
         Map<Villa,Integer> villaMap = this.iVillaServiceIO.readFile(PATH_VILLA);
 
@@ -65,7 +65,6 @@ public static final String PATH_VILLA = "src/casestudy/lamlai_casestudy/data/vil
                 System.out.println(entry1);
             }
         }
-        return null;
     }
 
 }

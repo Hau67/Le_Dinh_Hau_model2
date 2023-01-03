@@ -11,14 +11,21 @@ public class Menu {
     Scanner sc = new Scanner(System.in);
     public void displayMainMenu(){
         do {
-            System.out.println("1.Employee Management");
-            System.out.println("2.Customer Management");
-            System.out.println("3.Facility Management");
-            System.out.println("4.Booking Management");
-            System.out.println("5.Promotion Management");
-            System.out.println("6. Exit");
+            System.out.println("1.Quản lý nhân sự");
+            System.out.println("2.Quản lý khách hàng");
+            System.out.println("3.Quản lý cơ sở");
+            System.out.println("4.Quản lý đặt phòng");
+            System.out.println("5.Quản lý khuyến mãi");
+            System.out.println("6. thoát");
             System.out.println("chọn số nào");
-            int num = Integer.parseInt(sc.nextLine());
+            int num;
+            try {
+                num = Integer.parseInt(sc.nextLine());
+            }catch (NumberFormatException e){
+                System.out.println(e.getMessage());
+                continue;
+            }
+
             switch (num){
                 case 1:
                 menuEmployee.displayEmployee();

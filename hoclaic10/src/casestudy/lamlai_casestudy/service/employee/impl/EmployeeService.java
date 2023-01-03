@@ -1,5 +1,6 @@
 package casestudy.lamlai_casestudy.service.employee.impl;
 
+import casestudy.lamlai_casestudy.exception.NotFoundException;
 import casestudy.lamlai_casestudy.model.employee.Employee;
 import casestudy.lamlai_casestudy.service.employee.IEmployeeService;
 import casestudy.lamlai_casestudy.service.employee.IEmployeeServiceIO;
@@ -27,12 +28,22 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void xoaEmployee(String soCMND) {
+        Employee xoaXEmployee = null;
         for (Employee employee: list) {
             if (employee.getSoCMND().equals(soCMND)){
-                list.remove(employee);
-                break;
+            xoaXEmployee = employee;
+            break;
             }
         }
+        if (xoaXEmployee == null){
+            try {
+                throw new NotFoundException();
+            } catch (NotFoundException e) {
+                System.err.println(e.getMessage());
+            }
+        }
+
+        list.remove(xoaXEmployee);
         this.iEmployeeServiceIO.writeFile(PATH_EMPLOYEE,list);
     }
 
@@ -46,6 +57,21 @@ public class EmployeeService implements IEmployeeService {
                 String viTris = sc.nextLine();
                 System.out.println("sửa lương");
                 String luongs = sc.nextLine();
+                System.out.println("sửa tên");
+                String tens = sc.nextLine();
+                System.out.println("sửa email");
+                String emails= sc.nextLine();
+                System.out.println("sửa số điện thoại");
+                String soDTs = sc.nextLine();
+                System.out.println("sửa ngày sinh");
+                String ngaySinhs = sc.nextLine();
+                employee.setNgaySinh(ngaySinhs);
+                System.out.println("sửa giới tính");
+                String gioiTinhs = sc.nextLine();
+                employee.setGioiTinh(gioiTinhs);
+                employee.setSoDT(soDTs);
+                employee.setEmail(emails);
+                employee.setHoTen(tens);
                 employee.setTrinhDo(trinhdos);
                 employee.setViTri(viTris);
                 employee.setLuong(luongs);
